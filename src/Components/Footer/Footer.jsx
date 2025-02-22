@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from "../../../assets/footerImg/footer.png";
-import cornerImg from "../../../assets/footerImg/footerBelowImg.png"; // Add your new image here
+import img from "../../assets/footerImg/footer.png";
+import cornerImg from "../../assets/footerImg/footerBelowImg.png"; // Add your new image here
 import { Button } from '@mui/material';
 import StraightIcon from '@mui/icons-material/Straight';
 
