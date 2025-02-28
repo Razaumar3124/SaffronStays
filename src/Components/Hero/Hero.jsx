@@ -1,71 +1,58 @@
-import { Typography, Box, Grid, Card, CardMedia } from '@mui/material';
+import React from 'react';
 import { styled } from '@mui/material/styles';
-import heroimg from "../../assets/HeroImg/hero2.jpg"
+import Title from './HeroComp/Title';
+import HeroCard from './HeroComp/HeroCard';
+import img from "../../assets/HeroImg/tents-n-trails.jpg"
+import Nordic from './HeroComp/Nordic';
+import HeroSecMainCard from './HeroComp/HeroSecMainCard';
+import Socials from './HeroComp/Socials';
 
-const AnimatedContainer = styled('div')`
-  width: 100vw;
-  height: 80vh;
-  border-radius: 10px; /* Mobile view */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: scaleContainer 10s ease-in-out infinite alternate;
+const ResponsiveContainer = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexWrap: 'wrap',
+  padding: '0 2%',
+  gap: '10px', // Default gap for mobile
 
-  background: url(${heroimg}) center/cover no-repeat;
+  // Tablet view (sm)
+  [theme.breakpoints.up('xs')]: {
+    justifyContent: "center",
+  },
 
-  @keyframes scaleContainer {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05); /* Slight zoom effect */
-    }
-  }
+  [theme.breakpoints.up('sm')]: {
+    gap: "30px",
+    justifyContent: "center"
+  },
 
-  /* Tablet view (768px and up) */
-  @media (min-width: 768px) {
-    width: 99vw;
-    height: 85vh;
-    border-radius: 20px;
-  }
+  // Laptop view (md)
+  [theme.breakpoints.up('md')]: {
+    justifyContent: "space-between"
+  },
 
-  /* Laptop view (1024px and up) */
-  @media (min-width: 1024px) {
-    width: 100vw;
-    height: 100vh;
-    border-radius: 10px;
-  }
-`;
+  // Offset for even cards (only in laptop view and above)
+  [theme.breakpoints.up("md")]: {
+    '& > *:nth-of-type(2n)': {
+      marginTop: '40px',
+    },
+  },
+}));
+
 
 const Hero = () => {
   return (
-    <Box sx={{ width: '100%', position: 'relative', overflow: 'hidden' }}>
-      <Grid container justifyContent="center">
-        <Grid item xs={12} sx={{ position: 'relative' }}>
-          <Card sx={{ boxShadow: 'none' }}>
-            <AnimatedContainer />
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '20%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <Typography variant="h3" fontWeight="normal" color="black">
-                {/* Gear up for Great Outdoors® */}
-                GEAR UP FOR GREAT OUTDOORS®
-              </Typography>
-            </Box>
-          </Card>
-        </Grid>
-      </Grid>
-    </Box>
+    <>
+    <HeroSecMainCard/>
+    <Title props="Discover the Touch of Nature"/>
+    <ResponsiveContainer>
+      <HeroCard imageUrl={img} location="aurangabad" />
+      <HeroCard imageUrl={img} location="aurangabad" />
+      <HeroCard imageUrl={img} location="aurangabad" />
+      <HeroCard imageUrl={img} location="aurangabad" />
+    </ResponsiveContainer>
+    <Title props="Nordic Sea - Best for June 2025"/>
+    <Nordic />
+    <Title props="New Destinations"/>
+    <Socials />
+    </>  
   )
 }
 
