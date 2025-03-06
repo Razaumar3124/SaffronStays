@@ -6,6 +6,7 @@ import img from "../../assets/HeroImg/tents-n-trails.jpg"
 import Nordic from './HeroComp/Nordic';
 import HeroSecMainCard from './HeroComp/HeroSecMainCard';
 import Socials from './HeroComp/Socials';
+import CardComp from './HeroComp/CardComp';
 
 const ResponsiveContainer = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -51,6 +52,7 @@ const Hero = () => {
     <Title props="Nordic Sea - Best for June 2025"/>
     <Nordic />
     <Title props="New Destinations"/>
+    <CardComp />
     <Socials />
     </>  
   )

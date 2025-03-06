@@ -24,7 +24,8 @@ const Navbar = () => {
           <ProfileSection isMobile={isMobile} />
         </ProfileContainer>
       </MainNav>
-      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)} style={{ width: 250 }}
+  PaperProps={{ style: { width: 250 } }} >
         <DrawerMenu />
       </Drawer>
     </>
