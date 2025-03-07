@@ -17,15 +17,12 @@ const CircleButton = ({ children }) => (
     variant="outlined"
     color="black"
     sx={{
-      height: { xs: "80%", sm: "90%", md: "80%" },
-      width: { xs: "17%", sm: "15%", md: "14%", lg: "13%" },
-      fontSize: "2em",
+      width: { xs: "50px", sm: "55px", md: "60px" },
+      height: { xs: "50px", sm: "55px", md: "60px" },
       borderRadius: "50%",
-      minWidth: "50px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      aspectRatio: "1/1",
     }}
   >
     {children}

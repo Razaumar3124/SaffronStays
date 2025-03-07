@@ -3,6 +3,7 @@ import HomePage from '../Pages/HomePage'
 import Hero from '../Components/Hero/Hero'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
+import About from '../Pages/About'
 
 const routes = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
             {
                 path: "/signup",
                 element: <Signup/>
+            },
+            {
+                path: "/about",
+                element: <About />
             }
         ]
     }

@@ -45,9 +45,6 @@ const Hero = () => {
     <Title props="Discover the Touch of Nature"/>
     <ResponsiveContainer>
       <HeroCard imageUrl={img} location="aurangabad" />
-      <HeroCard imageUrl={img} location="aurangabad" />
-      <HeroCard imageUrl={img} location="aurangabad" />
-      <HeroCard imageUrl={img} location="aurangabad" />
     </ResponsiveContainer>
     <Title props="Nordic Sea - Best for June 2025"/>
     <Nordic />
